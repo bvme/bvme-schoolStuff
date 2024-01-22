@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    transition: all 0.5s ease-in-out;
+    border-radius: 15px;
+    margin: 50px;
+}
+button:hover {
+    background-color: aquamarine;
+}
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: dashed;
+    width: 300px;
+    height: 300px;
+}
+.box-2 {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+.box-2:hover {
+    width: 299px;
+    height: 299px;
+}
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 100px ;
+    margin-bottom: 500px;
+    gap: 20px;
+    border: solid black 10px;
+    width: 300px;
+    height: 30px;
+
+}
+.mini-container {
+    display: flex;
+    flex-direction: column;
+    border: solid 3px black ;
+    width: auto;
+    height: 100px;
+    
+}
+
+.shape {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: all 1s ease-in-out;
+    border: 10px white;
+}
+.shape:hover {
+    background-color: blue;
+    border: 50px black;
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+.box-3 {
+    margin: 100px;
+    width: 400px;
+    height: 400px;
+    background-color: #ff0000;
+    transition: all 1s ease-in-out;
+
+}
+.box-3:hover {
+    transform: rotate(360deg);
+    opacity: 0.5;
+    background-color: rgb(38, 207, 38);
+    box-shadow: 12px 12px gray;
+}

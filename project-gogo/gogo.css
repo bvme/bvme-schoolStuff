@@ -1,0 +1,434 @@
+body {
+    margin: 0;
+
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 133px;
+    margin-right: 133px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.gogo-logo {
+    margin-top:15px;
+    margin-right: 20px;
+}
+.gogo-logo img {
+    width: 120px;
+    height: 39px;
+}
+.menu-l{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 745px;
+    height: 39px;
+}
+.menu-l-mini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    width: 556px;
+    height: 22px;
+    gap: 20px;
+    font-size: 20px;
+}
+.menu-l-mini a {
+    text-decoration: none;
+    color: black;
+}
+.menu-l-mini img {
+    width: 10px;
+    height: 10px;
+}
+.search img {
+    width: 25px;
+    height: 20px;
+    margin-left: 20px;
+}
+.menu-r {
+    display: flex;
+    width: 270px;
+    height: 38px;
+    margin-left: 84px;
+    gap: 10px;
+}
+.menu-r p {
+    text-decoration: none;
+    color: black;
+}
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather p {
+    margin: 0;
+}
+.mini-weather {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    gap: 5px;
+}
+.astrology {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.astrology p {
+    margin: 0;
+}
+.mini-astro {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    gap: 5px;
+}
+.currency {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.currency p { 
+    margin: 0;
+}
+.mini-currency {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    gap: 5px;
+}
+.menu-r img {
+    width: 20px;
+    height: 20px;
+}
+.main-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 151px;
+    margin-right: 151px;
+    height: 748px;
+}
+.section-1 {
+    width: 1115px;
+    height: 385px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.section-1-container {
+    background: rgb(222,222,222);
+    background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(255,255,255,1) 72%);
+    border-radius: 10px;
+}
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 301px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 55px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.top-button {
+    width: 96px;
+    height: 30px;
+    border-radius: 15px;
+    background: rgb(219,35,9);
+    background: linear-gradient(90deg, rgba(219,35,9,1) 51%, rgba(245,176,19,1) 100%);  
+    text-decoration: none;
+}
+.box-1-detail {
+    display: flex;
+    flex-direction: column;
+    height: 264px;
+    width: 500px;
+    text-decoration: none;
+    color: black;
+}
+.share {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #cdcdcd;
+    gap: 5px;
+    border-radius: 15px;
+    width: 50px;
+    height: 30px;
+    margin-top: 30px;
+}
+.share img {
+    width: 16px;
+    height: 16px;
+}
+.top-button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    color: white;
+}
+.box-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.box-2 img {
+    aspect-ratio: 362 / 226;
+    object-fit: cover;
+    display: block;
+}
+.box-2-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 224, 113, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+}
+.news-description {
+    font-size: 14px;
+    color: #3d3d3d;
+    margin-top: 3px;
+    line-height: 21px;
+    margin-bottom: 18px ;
+}
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 50%;
+    color: #3d3d3d;
+    text-align: center;
+    line-height: 38px;
+}
+.project-link img {
+    width: 10px;
+    height: 10px;
+}
+.box-2:hover .box-2-overlay {
+    visibility: visible;
+    opacity: 1 ;
+}
+.section-2 {
+    width: 1115px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+.box {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.box img {
+    aspect-ratio: 362 / 226;
+    object-fit: cover;
+    display: block;
+}
+.box-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 224, 113, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all;
+    height: 180px;
+}
+.box:hover .box-overlay {
+    visibility: visible;
+    opacity: 1 ;
+}
+.add {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.box-share {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #cdcdcd;
+    gap: 5px;
+    border-radius: 15px;
+    width: 50px;
+    height: 30px;
+    margin-top: 30px;
+}
+.box-comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #cdcdcd;
+    gap: 5px;
+    border-radius: 15px;
+    width: 50px;
+    height: 30px;
+    margin-top: 30px;
+}
+.box-comment img {
+    width: 16px;
+    height: 16px;
+}
+.box-share img {
+    width: 16px;
+    height: 16px;
+}
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}   
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 151px;
+    margin-right: 151px;
+}
+.story-logo {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.second-tittle {
+    background-color: #4cb2e4;
+    border-radius: 5px;
+    color: white;
+}
+.stories {
+    display: grid;
+    grid-template-columns: repeat(6, 170px);
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+.storied img {
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1150px) {
+    .header {
+        flex-direction: column;
+    }
+    .section-1-container {
+        grid-template-columns: repeat(1, 100%   );
+        justify-content: center;
+        align-items: center;
+    }
+    .section-2 {
+        grid-template-columns: repeat(2, 20%);
+        margin-top: 200px;
+        margin-left: 50px;
+        justify-content: center;
+        align-items: center;
+        row-gap: 340px;
+        column-gap: 50p
+    }
+    .story {
+        margin-top: 300px;
+    }
+    .stories {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .menu-l {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+}
+.second-section {
+    display: flow-root;
+    box-sizing: content-box;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.dn {
+    padding-left: 140px;
+}
+.daily-news-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 740px;
+    height: 59px;
+    gap: 14px;
+}
+.unuudur {
+    font-size: 20px;
+}
+.unuudur img {
+    width: 23px;
+    height: 26px;
+}
+.today-line {
+    width: 103px;
+    height: 7px;
+    background-color: blue;
+    border-radius: 5px;
+}
+.day {
+    margin-top: 30px;
+}
+.line {
+    width: 103px;
+    height: 7px;
+    background-color: gray;
+    border-radius: 5px;
+}
+.daily-news {
+    margin-top: 40px;
+}
+.news-box{
+    width: 720px;
+    height: 150px;
+    margin-top:10px;
+}
+.news-box img {
+    width: 210px;
+    height: 150px;
+}

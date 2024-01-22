@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-image: url("yasaka-pagoda-sannen-zaka-street-kyoto-japan.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+i {
+    font-size: 12px;
+}
+.boards {
+    display: flex;
+    padding: 120px 0;
+    gap: 16px;
+}
+.board {
+    flex: 1;
+    flex-basis: 0;
+    height: fit-content;
+    background-color: #ebecf0;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: relative;
+    overflow: hidden;
+}
+.over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 300ms;
+  display: none;
+}
+
+.over i {
+  color: white;
+  font-size: 32px;
+}
+.board-header {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: grab;
+  display: flex;
+  gap: 12px;
+}
+.card .done {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.checked {
+  color: white;
+  background-color: #000;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .done:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.card .details {
+  flex: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#add-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px;
+}
+#add-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.away {
+  width: 100%;
+  height: 100%;
+}
+.active {
+  display: flex;
+}
+.modal {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 16px;
+    width: 400px;
+    padding: 16px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+input.error {
+  border: 1px solid ;
+}
+textarea.error {
+  border: 1px solid ;
+}
+.error + .helper-text {
+  display: block !important;
+}
+.helper-text {
+  display: none;
+  color: red;
+  font-size: 15px;
+  padding: 5px 15px;
+}
+label {
+  font-size: 15px;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  resize: none;
+  height: 100px;
+}
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  margin-top: 24px;
+}
+.count {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.priority {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  font-size: 15px;
+}
+.container {
+  margin: auto;
+  padding: 0 16px;
+  width: 1320px;
+  height: 100vh;
+}
+@media screen and (max-width: 1400px) {
+    .container {
+      width: 1140px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 960px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .container {
+      width: 720px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 540px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container {
+      width: 100%;
+    }
+  }
+  
+    
