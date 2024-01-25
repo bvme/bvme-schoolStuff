@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
   return (
-    <div className=" container flex flex-col mx-[250px]">
+    <div className="flex flex-col">
       <Header />
       <Profile />
       <About />
