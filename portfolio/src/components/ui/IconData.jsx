@@ -15,7 +15,7 @@ import {
   Cypress,
   Storybook,
   Git,
-} from "@/components/ui/TechnologyCards";
+} from "@/components/ui/technologyCards";
 export const Icons = [
   {
     Name: "Javascript",

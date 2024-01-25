@@ -5,25 +5,25 @@ export const Profile = () => {
         <div className="flex flex-col gap-[48px]">
           <div className="flex gap-[8px] flex-col">
             <h1 className="font-bold text-6xl">Hi, I'm Sagar 👋</h1>
-            <p className=" w-[768px]">
+            <div className=" w-[768px]">
               I'm a full stack developer (React.js & Node.js) with a focus on
               creating (and occasionally designing) exceptional digital
               experiences that are fast, accessible, visually appealing, and
               responsive. Even though I have been creating web applications for
               over 7 years, I still love it as if it was something new.
-            </p>
+            </div>
           </div>
           <div className="flex flex-col gap-[8px]">
-            <p className="flex gap-[8px]">
+            <div className="flex gap-[8px]">
               <img src="location.png" alt="" className="w-[24px] h-[24px]"/>
               Ahmedabad, India
-            </p>
-            <p className="flex gap-[8px]">
+            </div>
+            <div className="flex gap-[8px]">
               <div className="flex flex-col justify-center items-center w-[24px] h-[24px]">
                 <div className="flex bg-green-500 rounded-2xl w-[8px] h-[8px]"></div>
               </div>
               Available for new projects
-            </p>
+            </div>
           </div>
           <div className="flex p-[6px] gap-[16px]">
             <img src="cat.png" alt="" className="w-[24px] h-[24px]" />

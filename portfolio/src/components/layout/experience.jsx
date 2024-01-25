@@ -1,12 +1,12 @@
 export const Experience = () => {
   return (
-    <div className="px-[80px] py-[96px] bg-gray-100">
+    <div className="px-[80px] py-[96px] bg-gray-100 dark:bg-slate-900">
       <div className="flex flex-col gap-[48px] px-[32px] justify-center items-center">
         <div className="flex flex-col items-center gap-[16px]">
-          <div className=" bg-gray-300 rounded-xl w-fit">
-            <p className="px-[20px] py-[4px]">Experience</p>
+          <div className=" bg-gray-300 rounded-xl w-fit dark:bg-gray-600">
+            <div className="px-[20px] py-[4px]">Experience</div>
           </div>
-          <p>Here is a quick summary of my most recent experiences:</p>
+          <div>Here is a quick summary of my most recent experiences:</div>
         </div>
         <div className=" p-[32px] w-[896px] rounded-xl bg-white shadow-[0px_2px_2px_0px rgba(0, 0, 0, 0.06), 0px_4px_3px_0px rgba(0, 0, 0, 0.07)]">
           <div className="flex gap-[48px]">
@@ -28,7 +28,7 @@ export const Experience = () => {
                 </li>
               </ul>
             </div>
-            <p>Nov 2021 - Present</p>
+            <div>Nov 2021 - Present</div>
           </div>
         </div>
         <div className=" p-[32px] w-[896px] rounded-xl bg-white">
@@ -51,7 +51,7 @@ export const Experience = () => {
                 </li>
               </ul>
             </div>
-            <p>Nov 2021 - Present</p>
+            <div>Nov 2021 - Present</div>
           </div>
         </div>
         <div className=" p-[32px] w-[896px] rounded-xl bg-white">
@@ -67,7 +67,7 @@ export const Experience = () => {
                 </li>
               </ul>
             </div>
-            <p>Nov 2021 - Present</p>
+            <div>Nov 2021 - Present</div>
           </div>
         </div>
       </div>
