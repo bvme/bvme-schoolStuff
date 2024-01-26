@@ -15,22 +15,25 @@ export const Header = () => {
     localStorage.setItem("hello", "leap");
   }, [isDarkMode]);
   return (
-    <div className="flex justify-between items-center self-stretch px-[80px] py-[16px]">
+    <div className="flex items-center px-[80px] py-[16px] fixed">
       <div className="flex w-full justify-between items-center px-[32px]">
         <div>
-          <img className="" src="_.png" alt="" />
+          <img src="_.png" alt="" />
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 fixed right-20">
           <button>About</button>
           <button>Work</button>
           <button>Testimonials</button>
           <button>Contact</button>
           <div className="border-l-black border-l-[1px]"></div>
           <button onClick={() => setDarkMode((prevState) => !prevState)}>
-            <img src="moon.png" alt="" />
+            <img className=" hidden dark:flex" src="moon.png" alt="" />
+            <img className=" dark:hidden" src="sun.png" alt="" />
           </button>
           <button className="bg-black text-white rounded-xl dark:bg-white">
-            <div className="px-[16px] py-[6px] dark:text-black">Download CV</div>
+            <div className="px-[16px] py-[6px] dark:text-black">
+              Download CV
+            </div>
           </button>
         </div>
       </div>

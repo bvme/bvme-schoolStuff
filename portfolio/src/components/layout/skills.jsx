@@ -10,7 +10,9 @@ export const Skills = () => {
           </div>
           <div>The skills, tools and technologies I am really good at:</div>
         </div>
-        <LoopedIcons Icondata={Icons} />
+        <div className="flex flex-wrap justify-center gap-x-[200px] gap-y-[40px]">
+          <LoopedIcons Icondata={Icons} />
+        </div>
       </div>
     </div>
   );

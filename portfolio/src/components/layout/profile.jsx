@@ -5,7 +5,7 @@ export const Profile = () => {
         <div className="flex flex-col gap-[48px]">
           <div className="flex gap-[8px] flex-col">
             <h1 className="font-bold text-6xl">Hi, I'm Sagar 👋</h1>
-            <div className=" w-[768px]">
+            <div className=" flex xl:flex-wrap">
               I'm a full stack developer (React.js & Node.js) with a focus on
               creating (and occasionally designing) exceptional digital
               experiences that are fast, accessible, visually appealing, and

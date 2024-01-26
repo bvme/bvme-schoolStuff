@@ -8,7 +8,7 @@ export const Experience = () => {
           </div>
           <div>Here is a quick summary of my most recent experiences:</div>
         </div>
-        <div className=" p-[32px] w-[896px] rounded-xl bg-white shadow-[0px_2px_2px_0px rgba(0, 0, 0, 0.06), 0px_4px_3px_0px rgba(0, 0, 0, 0.07)]">
+        <div className=" p-[32px] w-[896px] rounded-xl bg-white dark:bg-gray-800 shadow-[0px_2px_2px_0px rgba(0, 0, 0, 0.06), 0px_4px_3px_0px rgba(0, 0, 0, 0.07)]">
           <div className="flex gap-[48px]">
             <div>
               <img src="logo-upwork.png" alt="" />
@@ -31,7 +31,7 @@ export const Experience = () => {
             <div>Nov 2021 - Present</div>
           </div>
         </div>
-        <div className=" p-[32px] w-[896px] rounded-xl bg-white">
+        <div className=" p-[32px] w-[896px] rounded-xl bg-white dark:bg-gray-800">
           <div className="flex gap-[48px]">
             <div>
               <img src="logo-upwork.png" alt="" />
@@ -54,7 +54,7 @@ export const Experience = () => {
             <div>Nov 2021 - Present</div>
           </div>
         </div>
-        <div className=" p-[32px] w-[896px] rounded-xl bg-white">
+        <div className=" p-[32px] w-[896px] rounded-xl bg-white dark:bg-gray-800">
           <div className="flex gap-[48px]">
             <div>
               <img src="logo-upwork.png" alt="" />

@@ -18,6 +18,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Work />
+      <hr />
       <Contact />
       <Footer />
     </div>

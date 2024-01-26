@@ -3,7 +3,7 @@ export const LoopedIcons = ({ Icondata }) => {
 };
 export const Skill = ({ Name, Logo }) => {
   return (
-    <div className="flex">
+    <div className="flex flex-col gap-2">
       <div className="flex justify-center">{Logo}</div>
       <div className="flex justify-center">{Name}</div>
     </div>
