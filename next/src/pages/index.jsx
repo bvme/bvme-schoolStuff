@@ -32,43 +32,43 @@ export default function home() {
   );
 }
 
-import { userData } from "@/components/userData";
-import { Cards } from "../components/cards";
-export default function Home() {
-  const styles = {
-    maincontainer: {
-      display: "flex",
-      flexWrap: "wrap",
-      gap: "20px",
-      justifyContent: "center",
-      margin: "40px 500px"
-    }
-  }
- return (
-  <div className="main-container" style={styles.maincontainer}>
-    < Cards />
-  </div>
- )
-};
+// import { userData } from "@/components/userData";
+// import { Cards } from "../components/cards";
+// export default function Home() {
+//   const styles = {
+//     maincontainer: {
+//       display: "flex",
+//       flexWrap: "wrap",
+//       gap: "20px",
+//       justifyContent: "center",
+//       margin: "40px 500px"
+//     }
+//   }
+//  return (
+//   <div className="main-container" style={styles.maincontainer}>
+//     < Cards />
+//   </div>
+//  )
+// };
 
-import { useState } from "react";
+// import { useState } from "react";
 
-export default function MyComponent() {
-  const [toggle, setToggle] = useState(false);
-  const handleClick = () => {
-    setToggle(!toggle);
-  };
-  return (
-    <div>
-      {toggle ? (
-        <button className="bg-red-500 w-50 h-50" onClick={handleClick}>
-          off
-        </button>
-      ) : (
-        <button className="bg-green-500 w-50 h-50" onClick={handleClick}>
-          on
-        </button>
-      )}
-    </div>
-  );
-}
+// export default function MyComponent() {
+//   const [toggle, setToggle] = useState(false);
+//   const handleClick = () => {
+//     setToggle(!toggle);
+//   };
+//   return (
+//     <div>
+//       {toggle ? (
+//         <button className="bg-red-500 w-50 h-50" onClick={handleClick}>
+//           off
+//         </button>
+//       ) : (
+//         <button className="bg-green-500 w-50 h-50" onClick={handleClick}>
+//           on
+//         </button>
+//       )}
+//     </div>
+//   );
+// }
