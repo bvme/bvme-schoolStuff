@@ -18,3 +18,12 @@ export default function Home() {
     </div>
   );
 }
+// import { FirstContextProvider } from "@/components/UI/Context";
+// import { Component } from "@/components/layout/component";
+// export default function Home() {
+//   return (
+//     <FirstContextProvider>
+
+//     </FirstContextProvider>
+//   )
+// }
