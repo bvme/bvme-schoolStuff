@@ -1,7 +1,7 @@
 export const First = () => {
   return (
-    <div className="bg-img">
-      <div className="flex flex-col bg-white rounded-xl w-[400px] h-fit p-[30px] gap-[20px]">
+    <div className="flex flex-col-reverse bg-img carousel-item pb-2 pl-2">
+      <div className=" flex flex-col bg-white rounded-xl w-[400px] h-fit p-[30px] gap-[20px] pb-2 pl-2">
         <button className="text-white bg-blue-600 rounded-xl w-[100px] h-[30px]">
           Technology
         </button>
@@ -15,8 +15,8 @@ export const First = () => {
 };
 export const Second = () => {
   return (
-    <div className="bg-img-2">
-      <div className="flex flex-col bg-white rounded-xl w-[400px] h-fit p-[30px] gap-[20px] ">
+    <div className=" flex flex-col-reverse bg-img-2 carousel-item pb-2 pl-2">
+      <div className="flex flex-col bg-white rounded-xl w-[400px] h-fit p-[30px] gap-[20px] pb-2 pl-2">
         <button className="text-white bg-blue-600 rounded-xl w-[100px] h-[30px]">
           Technology
         </button>
@@ -30,8 +30,8 @@ export const Second = () => {
 };
 export const Third = () => {
   return (
-    <div className="bg-img-3">
-      <div className="flex flex-col bg-white rounded-xl w-[400px] h-fit p-[30px] gap-[20px] ">
+    <div className=" flex flex-col-reverse bg-img-3 carousel-item pb-2 pl-2">
+      <div className="flex flex-col bg-white rounded-xl w-[400px] h-fit p-[30px] gap-[20px] pb-2 pl-2 ">
         <button className="text-white bg-blue-600 rounded-xl w-[100px] h-[30px]">
           Technology
         </button>
