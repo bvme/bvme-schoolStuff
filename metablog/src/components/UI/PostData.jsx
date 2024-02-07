@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import Link from "next/link";
 
 export function PostData() {
   const [articles, setArticles] = useState([]);
@@ -20,22 +20,17 @@ export function PostData() {
     fetchData();
   }, []);
 
-  const handleSearch = (event) => {
-    const filteredArticles = articles.filter((article) =>
-      article.title.toLowerCase().includes(event.target.value.toLowerCase())
-    );
-    setFilteredArray(filteredArticles);
-  };
-
   return (
     <div>
       <div className="flex gap-3 flex-wrap">
         {filteredArray.map((article) => {
           return (
-            <div className="border-[2px] rounded-md m-3 h-[200px] w-[300px] p-[10px]">
-              <img src={article.cover_image} alt="" />
-              {article.title}
-            </div>
+            <Link href={"singlepost"}>
+              <button className="border-[2px] rounded-md m-3 h-[200px] w-[300px] p-[10px]">
+                <img src={article.cover_image} alt="" />
+                {article.title}
+              </button>
+            </Link>
           );
         })}
       </div>

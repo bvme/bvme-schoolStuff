@@ -18,18 +18,11 @@ export function TrendingData() {
     fetchData();
   }, []);
 
-  const handleSearch = (event) => {
-    const filteredArticles = articles.filter((article) =>
-      article.title.toLowerCase().includes(event.target.value.toLowerCase())
-    );
-    setFilteredArray(filteredArticles);
-  };
-
   return (
     <div className="flex">
       {filteredArray.map((article) => {
         return (
-          <div className="">
+          <div>
             <img src={article.cover_image} alt="" />
             {article.title}
           </div>
