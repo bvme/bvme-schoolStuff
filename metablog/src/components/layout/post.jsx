@@ -17,9 +17,7 @@ export const Post = () => {
           <button>View All</button>
         </div>
       </div>
-      <div className=" w-full gap-40">
-        <PostData />
-      </div>
+      <PostData/>
     </div>
   );
 };
