@@ -26,9 +26,9 @@ export function PostData() {
         {filteredArray.map((article) => {
           return (
             <Link href={"singlepost"}>
-              <button className="border-[2px] rounded-md m-3 h-[200px] w-[300px] p-[10px]">
+              <button className="border-[2px] rounded-md m-3 h-fit w-[450px] p-[10px]">
                 <img src={article.cover_image} alt="" />
-                {article.title}
+                <div>{article.title}</div>
               </button>
             </Link>
           );

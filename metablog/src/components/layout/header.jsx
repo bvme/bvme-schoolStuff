@@ -1,6 +1,6 @@
 export const Header = () => {
   return (
-    <div>
+    <div className="px-[300px]">
       <div className="flex justify-between py-[30px] items-center">
         <img className=" w-[100px]" src="_.png" alt="" />
         <div className="flex gap-[20px]">

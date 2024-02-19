@@ -1,7 +1,9 @@
-import { TrendingData } from "../UI/TrendingData"; 
+import { TrendingData } from "../UI/TrendingData";
 export const Trending = () => {
-  return <div>
-    <div>Trending</div>
-    <TrendingData/>
-  </div>;
+  return (
+    <div className=" flex flex-col px-[300px] gap-3">
+      <div className="font-bold">Trending</div>
+      <TrendingData />
+    </div>
+  );
 };

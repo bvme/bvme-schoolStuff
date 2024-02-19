@@ -19,13 +19,21 @@ export function TrendingData() {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="flex gap-10 justify-center items">
       {filteredArray.map((article) => {
         return (
-          <div>
-            <img src={article.cover_image} alt="" />
-            {article.title}
-          </div>
+          <button
+            className="flex flex-col-reverse items-center pb-9 px-3"
+            style={{
+              backgroundImage: `url(${article.cover_image})`,
+              backgroundRepeat: `no-repeat`,
+              borderRadius: `20px`,
+              width: `100%`,
+              height: `400px`,
+            }}
+          >
+            <button className="flex bg-white rounded">{article.title}</button>
+          </button>
         );
       })}
     </div>

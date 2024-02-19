@@ -8,7 +8,7 @@ import {
 } from "../components/layout/index";
 export default function Home() {
   return (
-    <div className=" flex flex-col gap-[80px] px-[300px]">
+    <div className=" flex flex-col gap-[80px]">
       <Header />
       <Intro />
       <Trending />
@@ -18,12 +18,3 @@ export default function Home() {
     </div>
   );
 }
-// import { FirstContextProvider } from "@/components/UI/Context";
-// import { Component } from "@/components/layout/component";
-// export default function Home() {
-//   return (
-//     <FirstContextProvider>
-
-//     </FirstContextProvider>
-//   )
-// }
