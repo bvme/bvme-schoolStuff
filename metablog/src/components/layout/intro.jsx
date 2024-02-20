@@ -4,7 +4,7 @@ export const Intro = () => {
   return (
     <div className="flex items-center w-full px-[300px]">
       <div className=" flex flex-col gap-y-4 justify-center w-[100%]">
-        <div className="w-[100%] carousel ">
+        <div className="w-[100%] carousel rounded-xl drop-shadow-2xl">
           <First />
           <Second />
           <Third />

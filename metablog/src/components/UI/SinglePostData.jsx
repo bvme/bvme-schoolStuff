@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-export function TrendingData() {
+export function SinglePostData() {
   const [articles, setArticles] = useState([]);
   const [filteredArray, setFilteredArray] = useState(articles);
 
   const fetchData = async () => {
     try {
-      const res = await fetch("https://dev.to/api/articles?per_page=4");
+      const res = await fetch("https://dev.to/api/articles?per_page=1");
       const data = await res.json();
       setArticles(data);
       setFilteredArray(data);
@@ -17,23 +17,19 @@ export function TrendingData() {
   useEffect(() => {
     fetchData();
   }, []);
-
   return (
     <div className="flex gap-10 justify-center items-center">
       {filteredArray.map((article) => {
         return (
-          <button
-            className="flex flex-col-reverse items-center pb-9 px-3 drop-shadow-2xl"
-            style={{
-              backgroundImage: `url(${article.cover_image})`,
-              backgroundRepeat: `no-repeat`,
-              borderRadius: `20px`,
-              width: `100%`,
-              height: `400px`,
-            }}
-          >
-            <button className="flex bg-white rounded">{article.title}</button>
-          </button>
+          <div className="flex flex-col gap-[20px]">
+            <div className=" font-bold text-3xl">{article.title}</div>
+            <img
+              className=" drop-shadow-2xl rounded-xl"
+              src={article.cover_image}
+              alt=""
+            />
+            <div dangerouslySetInnerHTML={{ __html: article.body_html }}></div>
+          </div>
         );
       })}
     </div>

@@ -21,15 +21,17 @@ export function PostData() {
   }, []);
 
   return (
-      <div className="flex flex-wrap w-full justify-center gap-3">
-        {filteredArray.map((article) => {
-          return (
-              <button className="border-[2px] rounded-md m-3 h-fit w-[400px] p-[10px]">
-                <img src={article.cover_image} alt="" />
-                <div>{article.title}</div>
-              </button>
-          );
-        })}
-      </div>
+    <div className="flex flex-wrap w-full justify-center gap-3">
+      {filteredArray.map((article) => {
+        return (
+          <Link href={"singlepost"}>
+            <button className="border-[2px] rounded-md m-3 h-fit w-[400px] p-[10px] drop-shadow-2xl">
+              <img src={article.cover_image} alt="" />
+              <div>{article.title}</div>
+            </button>
+          </Link>
+        );
+      })}
+    </div>
   );
 }
