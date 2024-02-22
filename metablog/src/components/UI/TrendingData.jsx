@@ -19,20 +19,18 @@ export function TrendingData() {
   }, []);
 
   return (
-    <div className="flex gap-10 justify-center items-center">
+    <div className="grid grid-cols-4 h-[250px] px-[300px] gap-5  max-[1200px]:px-[200px] max-[1000px]:grid-cols-2 max-lg:grid-cols-1">
       {filteredArray.map((article) => {
         return (
           <button
-            className="flex flex-col-reverse items-center pb-9 px-3 drop-shadow-2xl"
+            className=" w-full bg-black active:bg-gray-500 hover:scale-105 transition ease-in-out delay-150 duration-300 active:opacity-50"
             style={{
               backgroundImage: `url(${article.cover_image})`,
               backgroundRepeat: `no-repeat`,
               borderRadius: `20px`,
-              width: `100%`,
-              height: `400px`,
             }}
           >
-            <button className="flex bg-white rounded">{article.title}</button>
+            <button className="flex rounded">{article.title}</button>
           </button>
         );
       })}

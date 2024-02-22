@@ -1,7 +1,7 @@
 export const Contact = () => {
   return (
-    <div className="bg-gray-200 ">
-      <div className=" flex flex-col px-[300px] py-[50px] gap-6">
+    <div className="bg-gray-200">
+      <div className=" flex flex-col px-[300px] py-[50px] gap-6 max-[1200px]:px-[200px] max-[1000px]:px-[100px] max-[800px]:px-[0px]">
         <div className="flex justify-between">
           <div className="flex flex-col w-[30%] gap-4">
             <div className=" font-bold">ABOUT</div>

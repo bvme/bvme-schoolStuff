@@ -1,22 +1,10 @@
-import { First, Second, Third } from "../UI/IntroImg";
+import { IntroData } from "../UI/introData";
 
 export const Intro = () => {
   return (
-    <div className="flex items-center w-full px-[300px]">
+    <div className="flex items-center w-full px-[300px] max-[1200px]:px-[200px] max-[1000px]:px-[100px] max-[800]:px-[50px]">
       <div className=" flex flex-col gap-y-4 justify-center w-[100%]">
-        <div className="w-[100%] carousel rounded-xl drop-shadow-2xl">
-          <First />
-          <Second />
-          <Third />
-        </div>
-        <div className="flex justify-center">
-          <button className="border h-fit rounded-md">
-            <img className=" w-8 mx-4 my-2 " src="left-arrow.png" alt="" />
-          </button>
-          <button className="border h-fit rounded-md">
-            <img className=" w-8 mx-4 my-2" src="right-arrow.png" alt="" />
-          </button>
-        </div>
+        <IntroData />
       </div>
     </div>
   );

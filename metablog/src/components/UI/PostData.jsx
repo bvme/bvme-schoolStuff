@@ -21,12 +21,12 @@ export function PostData() {
   }, []);
 
   return (
-    <div className="flex flex-wrap w-full justify-center gap-3">
+    <div className=" grid grid-cols-3 gap-5 max-[900px]:grid-cols-1">
       {filteredArray.map((article) => {
         return (
           <Link href={"singlepost"}>
-            <button className="border-[2px] rounded-md m-3 h-fit w-[400px] p-[10px] drop-shadow-2xl">
-              <img src={article.cover_image} alt="" />
+            <button className=" border-[2px] rounded-md m-3 h-fit p-[10px] drop-shadow-2xl hover:scale-105 transition ease-in-out delay-150 duration-300 active:opacity-50">
+              <img className="" src={article.cover_image} alt="" />
               <div>{article.title}</div>
             </button>
           </Link>
