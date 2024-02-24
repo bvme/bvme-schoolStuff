@@ -9,8 +9,12 @@ export const Header = () => {
           <Link href={"/"}>
             <button>Home</button>
           </Link>
-          <button>Blog</button>
-          <button>Contact</button>
+          <Link href={"allpost"}>
+            <button>Blog</button>
+          </Link>
+          <Link href={"contactpage"}>
+            <button>Contact</button>
+          </Link>
         </div>
         <input
           className="border-[1px] rounded-xl h-[30px]"

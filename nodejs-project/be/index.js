@@ -6,11 +6,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-let user = [];
+var user = [];
+
+// get
 
 app.get("/user", (request, response) => {
   response.json(user);
 });
+
+// post
+
 const data = fs.readFileSync("db.json");
 user = JSON.parse(data);
 app.post("/", (request, response) => {
@@ -19,16 +24,21 @@ app.post("/", (request, response) => {
   console.log(user);
   response.send(user);
 });
-app.delete("/:index", (request, response) => {
+
+// delete
+
+app.delete("/:user", (request, response) => {
   const index = parseInt(request.params.index);
-  if (index >= 0 && index < user.length) {
+  if (index >= 1 ) {
     user.splice(index, 1);
-    fs.writeFileSync("db.json", JSON.stringify(user));
     response.json(user);
   } else {
     console.log("be ajildgue");
   }
 });
+
+// listen
+
 app.listen(3001, () => {
   console.log(`3001 hello`);
 });
