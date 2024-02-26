@@ -6,11 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-var user = [];
+let user = [];
 
 // get
 
-app.get("/user", (request, response) => {
+app.get("/", (request, response) => {
   response.json(user);
 });
 
@@ -27,18 +27,10 @@ app.post("/", (request, response) => {
 
 // delete
 
-app.delete("/:user", (request, response) => {
-  const index = parseInt(request.params.index);
-  if (index >= 1 ) {
-    user.splice(index, 1);
-    response.json(user);
-  } else {
-    console.log("be ajildgue");
-  }
-});
+app.delete
 
 // listen
 
-app.listen(3001, () => {
-  console.log(`3001 hello`);
+app.listen(8080, () => {
+  console.log(`8080 hello`);
 });
