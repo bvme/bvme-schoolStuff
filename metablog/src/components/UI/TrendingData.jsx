@@ -23,7 +23,7 @@ export function TrendingData() {
       {filteredArray.map((article) => {
         return (
           <button
-            className=" w-full bg-black active:bg-gray-500 hover:scale-105 transition ease-in-out delay-150 duration-300 active:opacity-50"
+            className=" w-full bg-black hover:scale-105 transition ease-in-out delay-150 duration-300 active:opacity-50"
             style={{
               backgroundImage: `url(${article.cover_image})`,
               backgroundRepeat: `no-repeat`,

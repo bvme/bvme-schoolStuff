@@ -4,6 +4,8 @@ export default function Home() {
   const [form, setForm] = useState("");
   const [age, setAge] = useState("");
 
+// ADD FUNCTION
+
   const createData = async () => {
     const response = await fetch("http://localhost:3001", {
       method: "POST",
@@ -21,6 +23,9 @@ export default function Home() {
     console.log(age);
     createData();
   };
+
+// DELETE FUNCTION
+
   const deleteData = async (index) => {
     try {
       const response = await fetch(`http://localhost:3001/${index}`, {
@@ -38,7 +43,7 @@ export default function Home() {
         <input
           className=" border-[1px] border-black rounded h-[30px] w-[500px] "
           type="text"
-          placeholder="username"
+          placeholder="name"
           onChange={(event) => setForm(event.target.value)}
         />
         <input
@@ -49,7 +54,7 @@ export default function Home() {
         />
       </div>
       <button onClick={addData} className="border-[1px] border-black rounded">
-        <div className="p-[5px]">SUBMIT</div>
+        <div className="p-[5px] font-bold">SUBMIT</div>
       </button>
       <div className="flex flex-col w-[100vh] gap-4">
         {data?.map((element, index) => (
@@ -57,8 +62,8 @@ export default function Home() {
             className=" flex justify-between border-[1px] border-black rounded "
             key={index}
           >
-            <li className=" p-2 ">{element.form}</li>
-            <li className=" p-2 ">{element.age}</li>
+            <li className=" p-2 ">name: {element.form}</li>
+            <li className=" p-2 ">age: {element.age}</li>
             <div className=" flex gap-2 p-4">
               <button className="border-[1px] border-black rounded">
                 <div className="p-2">edit</div>
