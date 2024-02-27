@@ -27,7 +27,16 @@ app.post("/", (request, response) => {
 
 // delete
 
-app.delete
+app.delete("/id", (req, res) => {
+  const id = req.params.id;
+  for (i = 0; i < user.length; i++) {
+    if (user[i].id == id) {
+      user.splice(i, 1);
+      break;
+    }
+  }
+  res.send();
+});
 
 // listen
 

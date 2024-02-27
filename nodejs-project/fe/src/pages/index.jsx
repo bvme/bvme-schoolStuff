@@ -1,40 +1,50 @@
 import { useState } from "react";
-export default function Home() {
-  const [data, setData] = useState([]);
-  const [form, setForm] = useState("");
-  const [age, setAge] = useState("");
+import { v4 as uuidv4 } from "uuid";
 
-// ADD FUNCTION
+export default function Home() {
+  const [data, setData] = useState();
+  const [form, setForm] = useState();
+  const [age, setAge] = useState();
+
+  // ADD FUNCTION
 
   const createData = async () => {
-    const response = await fetch("http://localhost:3001", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ form, age }),
-    });
-    const res = await response.json();
-    setData(res);
-  };
-  const addData = () => {
-    console.log(form);
-    console.log(age);
-    createData();
-  };
-
-// DELETE FUNCTION
-
-  const deleteData = async (index) => {
+    if (form === undefined || age === undefined) {
+      window.alert("hooson bn");
+      return;
+    }
     try {
-      const response = await fetch(`http://localhost:3001/${index}`, {
-        method: "DELETE",
+      const response = await fetch("http://localhost:8080/", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ form, age, id: uuidv4() }),
       });
-      const data = await response.json();
-      setData(data);
+      const res = await response.json();
+      setData(res);
     } catch (error) {
-      console.log("fe ajildgue");
+      console.error("Error", error);
+    }
+  };
+
+  // DELETE FUNCTION
+
+  const deleteList = async () => {
+    try {
+      const res = await fetch("http://localhost:8080/user", {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ form, age }),
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error", error);
     }
   };
   return (
@@ -53,7 +63,10 @@ export default function Home() {
           onChange={(event) => setAge(event.target.value)}
         />
       </div>
-      <button onClick={addData} className="border-[1px] border-black rounded">
+      <button
+        onClick={createData}
+        className="border-[1px] border-black rounded"
+      >
         <div className="p-[5px] font-bold">SUBMIT</div>
       </button>
       <div className="flex flex-col w-[100vh] gap-4">
@@ -66,10 +79,10 @@ export default function Home() {
             <li className=" p-2 ">age: {element.age}</li>
             <div className=" flex gap-2 p-4">
               <button className="border-[1px] border-black rounded">
-                <div className="p-2">edit</div>
+                <div className="p-2 backdrop:bg-gray-500 w-full">edit</div>
               </button>
               <button className="border-[1px] border-black rounded">
-                <div onClick={deleteData} className="p-2">
+                <div className="p-2" onClick={deleteList}>
                   delete
                 </div>
               </button>
