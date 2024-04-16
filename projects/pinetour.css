@@ -177,6 +177,9 @@ body {
     line-height: normal;
     width: 299px;
 }
+.hidden {
+    display: none;
+}
 .price-container {
     display: flex;
     justify-content: flex-start;

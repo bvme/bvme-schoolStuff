@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API_URL = "http://localhost:8080/";
+const API_URL = "http://localhost:8080";
 export default function Home() {
   const [userData, setUserData] = useState({
     name: "",
